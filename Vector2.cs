@@ -70,7 +70,7 @@ namespace nsp
 
         public void display()
         {
-            Console.Write(this);
+            Console.WriteLine(this);
         }
 
         public double scalar(Vector2 otherVector)
