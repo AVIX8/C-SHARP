@@ -16,7 +16,8 @@ namespace nsp
                 arr[i] = new Vector2(
                     rnd.NextDouble()*Int16.MaxValue,
                     rnd.NextDouble()*Int16.MaxValue,
-                    new Color(color[0], color[1], color[2]));
+                    new Color(color[0], color[1], color[2])
+                );
             }
 
             for (int i = 0; i < k; i++)
@@ -50,6 +51,5 @@ namespace nsp
                 Console.Clear();
             }
         }
-
     }
 }

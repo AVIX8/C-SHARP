@@ -2,30 +2,13 @@ using System;
 
 namespace nsp
 {
-    public class Vector2
+    public struct Vector2
     {
-        double x_ = 0;
-        double y_ = 0;
-        Color color_ = new Color(255, 255, 255);
+        double x;
+        double y;
+        Color color;
 
-        public double x
-        {
-            get { return x_; }
-            set { x_ = value; }
-        }
-        public double y {
-            get { return y_; }
-            set { y_ = value; }
-        }
-        public Color color
-        {
-            get { return color_; }
-            set { color_ = value; }
-        }
-
-        public Vector2() { }
-
-        public Vector2(double x, double y)
+        public Vector2(double x, double y) : this()
         {
             this.x = x;
             this.y = y;
