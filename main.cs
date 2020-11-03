@@ -6,6 +6,24 @@ namespace nsp
     {
         public static void Main(string[] args)
         {
+            Random rnd = new Random(DateTime.Now.Millisecond);
+            int k = 10;
+            Vector2[] arr = new Vector2[k];
+            for (int i = 0; i < k; i++)
+            {
+                byte[] color = new byte[3];
+                rnd.NextBytes(color);
+                arr[i] = new Vector2(
+                    rnd.NextDouble()*Int16.MaxValue,
+                    rnd.NextDouble()*Int16.MaxValue,
+                    new Color(color[0], color[1], color[2]));
+            }
+
+            for (int i = 0; i < k; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+
             while (true)
             {
                 Vector2 v1 = new Vector2();

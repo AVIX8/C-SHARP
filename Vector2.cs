@@ -4,28 +4,41 @@ namespace nsp
 {
     public class Vector2
     {
-        int x = 0;
-        int y = 0;
-        Color color = new Color(255, 255, 255);
+        double x_ = 0;
+        double y_ = 0;
+        Color color_ = new Color(255, 255, 255);
 
-        public Vector2()
+        public double x
         {
+            get { return x_; }
+            set { x_ = value; }
+        }
+        public double y {
+            get { return y_; }
+            set { y_ = value; }
+        }
+        public Color color
+        {
+            get { return color_; }
+            set { color_ = value; }
         }
 
-        public Vector2(int x, int y)
+        public Vector2() { }
+
+        public Vector2(double x, double y)
         {
             this.x = x;
             this.y = y;
         }
 
-        public Vector2(int x, int y, Color color)
+        public Vector2(double x, double y, Color color)
         {
             this.x = x;
             this.y = y;
             this.color = color;
         }
 
-        public void init(int x, int y)
+        public void init(double x, double y)
         {
             this.x = x;
             this.y = y;
@@ -44,8 +57,8 @@ namespace nsp
                 try
                 {
                     string[] a = Console.ReadLine().Split();
-                    x = Int32.Parse(a[0]);
-                    y = Int32.Parse(a[1]);
+                    x = Double.Parse(a[0]);
+                    y = Double.Parse(a[1]);
                     break;
                 }
                 catch (Exception e)
