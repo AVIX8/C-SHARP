@@ -6,19 +6,25 @@
         {
             "label": "build (mcs, debug)",
             "type": "shell",
-            "command": "mcs -debug /out:main.exe *.cs",
+            "command": "mcs",
             "problemMatcher": [],
+            "args": [
+                "-debug",
+                "/out:main.exe",
+                "*.cs",
+                "/main:nsp.main",
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
         },
-        {
-            "label": "build (csc)",
-            "type": "shell",
-            "command": "csc /out:main.exe *.cs",
-            "problemMatcher": [],
-            "group": "build"
-        }
+        // {
+        //     "label": "build (csc)",
+        //     "type": "shell",
+        //     "command": "csc /out:main.exe *.cs",
+        //     "problemMatcher": [],
+        //     "group": "build"
+        // }
     ]
 }
