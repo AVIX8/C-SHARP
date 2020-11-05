@@ -97,9 +97,15 @@ namespace nsp
             return Math.Min(ang, 360 - ang);
         }
 
-        public Vector2 add(Vector2 otherVector)
+        public static Vector2 operator +(Vector2 v1, Vector2 v2)
         {
-            return new Vector2(x + otherVector.x, y + otherVector.y);
+            return new Vector2(v1.x + v2.x, v1.y + v2.y);
+        }
+
+        public static Vector2 operator ++(Vector2 v)
+        {
+            double len = v.length;
+            return new Vector2(v.x + v.x / len, v.y + v.y / len);
         }
     }
 }
