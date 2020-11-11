@@ -78,7 +78,7 @@ namespace nsp
 
         public override string ToString()
         {
-            return $"<Vector2 (x:{x}, y:{y}), length: {length}, color: \u001B[48;2;{color.r};{color.g};{color.b}m   \u001B[0m>";
+            return $"<Vector2 (x:{x}, y:{y}), length: {length}, color: {color} >";
         }
 
         public void display()
@@ -86,14 +86,14 @@ namespace nsp
             Console.WriteLine(this);
         }
 
-        public double scalar(Vector2 otherVector)
+        public static double scalar(Vector2 v1, Vector2 v2)
         {
-            return x * otherVector.x + y * otherVector.y;
+            return v1.x * v2.x + v1.y * v2.y;
         }
 
-        public double angle(Vector2 otherVector)
+        public static double angle(Vector2 v1, Vector2 v2)
         {
-            double ang = Math.Acos(scalar(otherVector) / length / otherVector.length) / Math.PI * 180;
+            double ang = Math.Acos(Vector2.scalar(v1,v2) / v1.length / v2.length) / Math.PI * 180;
             return Math.Min(ang, 360 - ang);
         }
 
