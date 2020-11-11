@@ -2,9 +2,13 @@ namespace nsp
 {
     public class Color
     {
-        public int r;
-        public int g;
-        public int b;
+        public static Color red{ get{ return new Color(255,0,0); } }
+        public static Color green{ get{ return new Color(0,255,0); } }
+        public static Color blue{ get{ return new Color(0,0,255); } }
+
+        private int r;
+        private int g;
+        private int b;
 
         public Color()
         {
@@ -18,6 +22,11 @@ namespace nsp
             this.r = r;
             this.g = g;
             this.b = b;
+        }
+
+        public override string ToString()
+        {
+            return $"\u001B[48;2;{r};{g};{b}m   \u001B[0m";
         }
     }
 }
