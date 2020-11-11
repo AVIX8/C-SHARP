@@ -76,21 +76,21 @@ namespace nsp
             {
                 Vector2 v1 = new Vector2();
                 v1.read();
-                v1.setColor(new Color(255, 255, 0));
+                v1.setColor(Color.red);
                 Console.Write("v1 = ");
                 v1.display();
 
                 Vector2 v2 = new Vector2();
                 v2.read();
-                v2.setColor(new Color(0, 255, 255));
+                v2.setColor(Color.green);
                 Console.Write("v2 = ");
                 v2.display();
 
-                Console.WriteLine($"Angle between v1 and v2 = {v1.angle(v2)} degrees");
+                Console.WriteLine($"Angle between v1 and v2 = {Vector2.angle(v1, v2)} degrees");
 
                 Vector2 sum = v1 + v2;
                 Console.Write("v1 + v2 = ");
-                sum.setColor(new Color(255, 0, 255));
+                sum.setColor(Color.blue);
                 sum.display();
 
                 Pause();
