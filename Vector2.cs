@@ -38,12 +38,6 @@ namespace nsp
             this.color = color;
         }
 
-        public void init(double x, double y)
-        {
-            this.x = x;
-            this.y = y;
-        }
-
         public void setColor(Color color)
         {
             this.color = color;
