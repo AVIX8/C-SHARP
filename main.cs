@@ -17,7 +17,7 @@ namespace nsp
         {
             Console.WriteLine("3) Инициализировать небольшой массив конструктором с одним параметром;");
 
-            Vector2[] arr = new Vector2[] { new Vector2(), new Vector2(2, 4), new Vector2(3, 6, Color.red) };
+            Vector2[] arr = new Vector2[3] { new Vector2(), new Vector2(2, 4), new Vector2(3, 6, Color.red) };
 
             for (int i = 0; i < arr.Length; i++)
             {
@@ -25,6 +25,26 @@ namespace nsp
             }
 
             Pause();
+
+            Console.WriteLine("LR_11. 1) В main продемонстрировать работу с одно и двумерными массивами объектов вашего класса;");
+
+            Vector2[,] twoDimArr = new Vector2[10,30];
+            for (int i = 0; i < twoDimArr.GetLength(0); i++) {
+                for (int j = 0; j < twoDimArr.GetLength(1); j++) {
+                    twoDimArr[i,j] = new Vector2(i,j,
+                        new Color(i*(int)255/twoDimArr.GetLength(0), 0, j*(int)255/twoDimArr.GetLength(1))
+                    );
+                }
+            }
+
+            for (int i = 0; i < twoDimArr.GetLength(0); i++) {
+                for (int j = 0; j < twoDimArr.GetLength(1); j++) {
+                    Console.Write(twoDimArr[i,j].color);
+                }
+                Console.WriteLine();
+            }
+
+
 
             while (true)
             {
