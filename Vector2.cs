@@ -53,6 +53,9 @@ namespace nsp
                     string[] a = Console.ReadLine().Split();
                     x = Double.Parse(a[0]);
                     y = Double.Parse(a[1]);
+                    if (x>10) {
+                        throw new Exception("[!] x cannot be more than 10");
+                    }
                     break;
                 }
                 catch (Exception e)

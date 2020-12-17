@@ -44,7 +44,7 @@ namespace nsp
                 Console.WriteLine();
             }
 
-
+            Pause();
 
             while (true)
             {
